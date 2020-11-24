@@ -195,7 +195,7 @@ def hou(sh):
         else:
             continue
 
-#前段奖励根据活动进行分类（cook/trip/garden）
+#前段奖励根据活动进行分类（cook/trip/garden/bingo）
 def typesr(sr):
     lis = sr.strip().split('},')
     for o in lis:
@@ -275,28 +275,7 @@ def typesr(sr):
         # q = o[2]
         # r = o[4]
         # if q == '4':
-        #     print(str(r)+ '星legend*' + str(p))
-        # elif q == '3':
-        #     print('Wild*1')
-        # elif q == '2':
-        #     print(str(r)+ '星Treasure*' + str(p))
-        # else:
-        #     if r == '1':
-        #         print('铜' + '*' + str(p))
-        #     elif r == '2':
-        #         print('银' + '*' + str(p))
-        #     elif r == '3':
-        #         print('金' + '*' + str(p))
-        #     elif r == '4':
-        #         print('钻石' + '*' + str(p))
-        #     else:
-        #         print(str(int(q) - 4) + '星legend宝箱*' + str(p))
-        #garden活动额外奖励
-        # p = o[0]
-        # q = o[2]
-        # r = o[4]
-        # if q == '4':
-        #     print(str(r)+ '星legend*' + str(p))
+        #     print(str(r) + '星legend*' + str(p))
         # elif q == '3':
         #     if r == '1':
         #         print('Wild*1')
@@ -305,7 +284,7 @@ def typesr(sr):
         #     else:
         #         print('未知消息类型')
         # elif q == '2':
-        #     print(str(r)+ '星Treasure*' + str(p))
+        #     print(str(r) + '星Treasure*' + str(p))
         # else:
         #     if r == '1':
         #         print('铜' + '*' + str(p))
@@ -316,46 +295,38 @@ def typesr(sr):
         #     elif r == '4':
         #         print('钻石' + '*' + str(p))
         #     else:
-        #         print(str(int(q) - 4) + '星legend宝箱*' + str(p))
+        #         print(str(int(r) - 4) + '星legend宝箱*' + str(p))
 
         # flash活动
-        p = o[0]
-        q = o[2]
-        r = o[4]
-        s = o[6]
-        if p == '2':
-            if q == '1':
-                print('wildcard*1')
-            elif q == '2':
-                print('Missingcard*1')
-        else:
-            if r == '0':
-                f = ''
-            else:
-                f = '选卡'
-            if q == '1':
-                print('铜' + f + '*' + str(s))
-            elif q == '2':
-                print('银' + f + '*' + str(s))
-            elif q == '3':
-                print('金' + f + '*' + str(s))
-            elif q == '4':
-                print('钻石' + f + '*' + str(s))
-            else:
-                print(str(int(q) - 4) + '星legend' + f + '宝箱*' + str(s))
+        # p = o[0]
+        # q = o[2]
+        # r = o[4]
+        # s = o[6]
+        # if p == '2':
+        #     if q == '1':
+        #         print('wildcard*1')
+        #     elif q == '2':
+        #         print('Missingcard*1')
+        # else:
+            # if r == '0':
+            #     f = ''
+            # else:
+            #     f = '选卡'
+            # if q == '1':
+            #     print('铜' + f + '*' + str(s))
+            # elif q == '2':
+            #     print('银' + f + '*' + str(s))
+            # elif q == '3':
+            #     print('金' + f + '*' + str(s))
+            # elif q == '4':
+            #     print('钻石' + f + '*' + str(s))
+            # else:
+            #     print(str(int(q) - 4) + '星legend' + f + '宝箱*' + str(s))
 if __name__ == "__main__":
 #产品横文案转竖文案
     sj = '''
-铜	铜	银	金	3星Treasure卡	3星legend卡	3星legend宝箱+Missing	3星legend宝箱
-铜	铜	银	金	3星Treasure卡	3星legend卡	3星legend宝箱+Missing	3星legend宝箱
-铜	银	银	金	3星Treasure卡	3星legend卡	3星legend宝箱+Missing	3星legend宝箱
-银	银	银	金	3星Treasure卡	3星legend卡	3星legend宝箱+Missing	3星legend宝箱
-银	银	金	金	3星Treasure卡	3星legend卡	4星legend宝箱+Missing	4星legend宝箱
-银	金	金	钻石	3星Treasure卡	3星legend卡	4星legend宝箱+Missing	4星legend宝箱
-银	金	金	钻石	3星Treasure卡	3星legend卡	4星legend宝箱+Missing	4星legend宝箱
-金	金	金	钻石	3星Treasure卡	3星legend卡	4星legend宝箱+Missing	4星legend宝箱
-金	金	钻石	钻石	3星Treasure卡	3星legend卡	4星legend宝箱+Missing	4星legend宝箱
-金	金	钻石	钻石	3星Treasure卡	3星legend卡	4星legend宝箱+Missing	4星legend宝箱
+0.5	0.8	1	2	5	10
+0.2	0.4	0.24	0.1	0.05	0.01
 '''
 
 #前端公告板转中文
@@ -491,4 +462,4 @@ GARDEN_REWARD_CARD = [
 # hou(sh)
 # lis = transform(sc)
 # printing(lis)
-typesr(sr)
+# typesr(sr)
