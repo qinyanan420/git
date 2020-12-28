@@ -12,14 +12,14 @@ driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub',desired_caps)
 # 获取当前手机屏幕大小X,Y
 X = driver.get_window_size()['width']
 Y = driver.get_window_size()['height']
+l = 2400
+d = 1080
 def taptest(driver,x,y):
-    global X
-    global Y
     # 设定系数,控件在当前手机的坐标位置除以当前手机的最大坐标就是相对的系数了
-    a1 = x/2400
-    b1 = y/1080
+    a1 = x
+    b1 = y
     # 屏幕坐标乘以系数即为用户要点击位置的具体坐标
-    driver.tap([(a1*X, b1*Y)])
+    driver.tap([(a1, b1),(a1, b1),(a1, b1),(a1, b1),(a1, b1)])
 if __name__ == '__main__':
     time.sleep(2)
     print('点击google弹窗ok按钮')

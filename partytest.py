@@ -325,8 +325,7 @@ def typesr(sr):
 if __name__ == "__main__":
 #产品横文案转竖文案
     sj = '''
-0.5	0.8	1	2	5	10
-0.2	0.4	0.24	0.1	0.05	0.01
+钻石*20	instant win*2	钻石*20	double xp*2	700	金卡包*1	Double daub*2	钻石*20	double win*2	800	Double daub*3	钻石*40	double win*3	200	Instant win*11	金卡包*1	200	Instant win*3	钻石*40	900	double win*3	200	钻石*40	Instant win*3	1000	紫卡包*1	Double daub*3	一星卡包*1	double daub*4	钻石*75	1200	Double win*4	钻石*75	Double xp*4	二星卡包	Double daub*6	钻石*75	1400	Instant win*6	钻石*100	rare*18	钻石*100	三星卡包*1
 '''
 
 #前端公告板转中文
@@ -463,3 +462,5 @@ GARDEN_REWARD_CARD = [
 # lis = transform(sc)
 # printing(lis)
 # typesr(sr)
+
+
